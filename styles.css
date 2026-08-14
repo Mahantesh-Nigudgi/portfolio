@@ -1286,3 +1286,362 @@ button {
     padding: 0.4rem 0.85rem;
   }
 }
+
+
+/* ==========================================================
+   Professional Portfolio Refinements
+   Keeps the original component system intact while adding
+   a cleaner executive-style presentation and photo treatment.
+   ========================================================== */
+
+:root {
+  --color-bg: #070b12;
+  --color-bg-alt: #0d1420;
+  --color-surface: #121b29;
+  --color-surface-hover: #192538;
+  --color-border: rgba(148, 163, 184, 0.18);
+  --color-text: #f3f6fa;
+  --color-text-muted: #a5b2c3;
+  --color-primary: #28d7b0;
+  --color-primary-dark: #19b997;
+  --color-accent: #7180ff;
+  --shadow-sm: 0 4px 18px rgba(0, 0, 0, 0.24);
+  --shadow-md: 0 18px 45px rgba(0, 0, 0, 0.32);
+  --shadow-glow: 0 0 55px rgba(40, 215, 176, 0.10);
+}
+
+body {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(40, 215, 176, 0.055), transparent 28rem),
+    radial-gradient(circle at 88% 22%, rgba(113, 128, 255, 0.055), transparent 30rem),
+    var(--color-bg);
+}
+
+.site-header {
+  background: rgba(7, 11, 18, 0.78);
+  border-bottom-color: rgba(148, 163, 184, 0.08);
+}
+
+.nav__logo {
+  letter-spacing: -0.03em;
+}
+
+.nav__link {
+  position: relative;
+}
+
+.nav__link:not(.nav__link--cta)::after {
+  content: "";
+  position: absolute;
+  left: 0.85rem;
+  right: 0.85rem;
+  bottom: 0.22rem;
+  height: 2px;
+  border-radius: 99px;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform var(--transition);
+}
+
+.nav__link:hover::after,
+.nav__link.is-active::after {
+  transform: scaleX(1);
+}
+
+.nav__link:hover,
+.nav__link.is-active {
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.hero {
+  min-height: 92vh;
+}
+
+.hero__inner {
+  gap: 4.5rem;
+  padding-block: 5.5rem 4.5rem;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero__badge {
+  box-shadow: inset 0 0 0 1px rgba(40, 215, 176, 0.04);
+}
+
+.hero__title {
+  max-width: 760px;
+  letter-spacing: -0.045em;
+}
+
+.hero__subtitle {
+  line-height: 1.75;
+}
+
+.hero__meta {
+  gap: 0.65rem 1.2rem;
+}
+
+.hero__meta li {
+  padding: 0.42rem 0.72rem;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 999px;
+}
+
+.hero__actions .btn {
+  min-height: 48px;
+}
+
+.hero__visual {
+  position: relative;
+}
+
+.hero__card {
+  background: rgba(18, 27, 41, 0.88);
+  backdrop-filter: blur(14px);
+  border-color: rgba(148, 163, 184, 0.16);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28), var(--shadow-glow);
+}
+
+.hero__code {
+  min-height: 255px;
+}
+
+.stat-card {
+  background: rgba(18, 27, 41, 0.86);
+  backdrop-filter: blur(10px);
+}
+
+.stat-card__number {
+  letter-spacing: -0.04em;
+}
+
+.section {
+  position: relative;
+}
+
+.section__title {
+  letter-spacing: -0.035em;
+}
+
+.section__header {
+  position: relative;
+}
+
+.section__header::after {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 3px;
+  margin: 1rem auto 0;
+  border-radius: 99px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+}
+
+.about__grid {
+  gap: 4.25rem;
+}
+
+.about__photo {
+  display: grid;
+  place-items: center;
+}
+
+.about__avatar {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  padding: 6px;
+  background: linear-gradient(145deg, #172235, #0b111b);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 0 0 1px rgba(40, 215, 176, 0.12),
+    0 24px 55px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
+
+.about__initials {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  font-size: 0;
+}
+
+.about__initials img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 50%;
+}
+
+.about__avatar-ring {
+  inset: -7px;
+  border-radius: 50%;
+  opacity: 0.38;
+  animation: ringPulse 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.about__text {
+  max-width: 720px;
+}
+
+.about__text p {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.about__highlights {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.about__highlights li {
+  margin-bottom: 0;
+  padding: 0.7rem 0.9rem 0.7rem 2rem;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(148, 163, 184, 0.10);
+  border-radius: 10px;
+}
+
+.skill-card,
+.project-card,
+.award-card,
+.edu-card,
+.contact-form,
+.contact-link {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.skill-card:hover,
+.project-card:hover,
+.award-card:hover,
+.edu-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.20);
+}
+
+.skill-tag {
+  border: 1px solid rgba(40, 215, 176, 0.10);
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+.project-card__title {
+  letter-spacing: -0.02em;
+}
+
+.contact-grid {
+  align-items: stretch;
+}
+
+.contact-link {
+  background: rgba(18, 27, 41, 0.76);
+}
+
+.contact-form {
+  background: rgba(18, 27, 41, 0.84);
+  backdrop-filter: blur(10px);
+}
+
+.form-group input,
+.form-group textarea {
+  background: rgba(7, 11, 18, 0.72);
+}
+
+.btn--primary {
+  box-shadow: 0 10px 28px rgba(40, 215, 176, 0.18);
+}
+
+.btn--outline {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.site-footer {
+  background: rgba(7, 11, 18, 0.55);
+}
+
+@media (max-width: 900px) {
+  .hero__inner {
+    gap: 2.5rem;
+    padding-block: 4rem;
+  }
+
+  .about__avatar {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .hero__inner {
+    padding-block: 3.5rem 3rem;
+  }
+
+  .hero__title {
+    font-size: clamp(2.15rem, 9vw, 3rem);
+  }
+
+  .hero__meta {
+    justify-content: center;
+  }
+
+  .hero__meta li {
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about__avatar {
+    width: 210px;
+    height: 210px;
+  }
+
+  .hero__meta li {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
