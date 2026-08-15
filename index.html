@@ -34,7 +34,7 @@
         <li><a class="nav__link" href="#awards">Awards</a></li>
         <li><a class="nav__link" href="#education">Education</a></li>
         <li><a class="nav__link" href="#contact">Contact</a></li>
-        <li><a class="nav__link nav__link--cta" href="resume.pdf" download="Mahantesh_S_Nigudgi_Resume.pdf">Resume</a></li>
+        <li><a class="nav__link nav__link--cta" href="Mahantesh_S_Nigudgi.pdf" download="Mahantesh_S_Nigudgi_Mahantesh_S_Nigudgi.pdf">Resume</a></li>
       </ul>
     </nav>
   </header>
@@ -72,7 +72,7 @@
           </ul>
           <div class="hero__actions">
             <a class="btn btn--primary" href="#projects">View Projects</a>
-            <a class="btn btn--outline" href="resume.pdf" download="Mahantesh_S_Nigudgi_Resume.pdf">Download Resume</a>
+            <a class="btn btn--outline" href="Mahantesh_S_Nigudgi.pdf" download="Mahantesh_S_Nigudgi_Resume.pdf">Download Resume</a>
           </div>
           <div class="hero__social">
             <a href="https://github.com/mahantesh-nigudgi" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
@@ -263,54 +263,56 @@ Every challenge is a chance to grow.</span>
         <header class="section__header">
           <span class="section__tag">Portfolio</span>
           <h2 id="projects-heading" class="section__title">Featured projects</h2>
-          <p class="section__desc">Real projects from my engineering journey — IoT systems and Python applications.</p>
+          <p class="section__desc">Real-world projects demonstrating my Python, OOP, and IoT development experience.</p>
         </header>
 
         <div class="filter-bar" role="tablist" aria-label="Project categories">
           <button class="filter-btn is-active" role="tab" aria-selected="true" data-project-filter="all">All</button>
-          <button class="filter-btn" role="tab" aria-selected="false" data-project-filter="iot">IoT</button>
           <button class="filter-btn" role="tab" aria-selected="false" data-project-filter="python">Python</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-project-filter="iot">IoT</button>
         </div>
 
         <div class="projects-grid">
-          <article class="project-card" data-category="iot">
-            <div class="project-card__badge project-card__badge--iot">IoT</div>
-            <h3 class="project-card__title">IoT Health Monitoring System</h3>
-            <p class="project-card__date">May 2024</p>
-            <p class="project-card__problem"><strong>Problem:</strong> Remote patient health tracking was limited and lacked real-time visibility.</p>
-            <p class="project-card__solution"><strong>Solution:</strong> Built a health monitoring system combining sensors and IoT cloud platform for real-time remote monitoring and management of vital health data.</p>
-            <ul class="project-card__tech">
-              <li>C++</li><li>Arduino IDE</li><li>MATLAB</li><li>IoT Cloud</li>
-            </ul>
-            <p class="project-card__impact"><strong>Impact:</strong> Enables early detection of health issues and improves patient care outcomes through continuous vital data analysis.</p>
-          </article>
-
-          <article class="project-card" data-category="iot">
-            <div class="project-card__badge project-card__badge--iot">IoT</div>
-            <h3 class="project-card__title">Automated Plant Watering System</h3>
-            <p class="project-card__date">May 2023</p>
-            <p class="project-card__problem"><strong>Problem:</strong> Manual plant watering is inconsistent and wasteful.</p>
-            <p class="project-card__solution"><strong>Solution:</strong> Designed an automated system using temperature and moisture sensors with Arduino UNO and a servo motor to pump water only when needed.</p>
-            <ul class="project-card__tech">
-              <li>C++</li><li>Arduino UNO</li><li>MATLAB</li><li>Moisture Sensor</li><li>Servo Motor</li>
-            </ul>
-            <p class="project-card__impact"><strong>Impact:</strong> Smart irrigation based on environmental conditions — reduces water waste and keeps plants healthy.</p>
-          </article>
 
           <article class="project-card" data-category="python">
             <div class="project-card__badge project-card__badge--python">Python</div>
-            <h3 class="project-card__title">Library Management System</h3>
-            <p class="project-card__date">Sep 2025</p>
-            <p class="project-card__problem"><strong>Problem:</strong> Manual book record keeping is error-prone and slow.</p>
-            <p class="project-card__solution"><strong>Solution:</strong> Developed a console-based Library Management System in Python with full CRUD operations using OOP principles and JSON file handling.</p>
+            <h3 class="project-card__title">Vehicle Rental System</h3>
+            <p class="project-card__date">Aug 2026</p>
+            <p class="project-card__problem"><strong>Problem:</strong> Managing vehicle availability and rental calculations manually can lead to incorrect availability status and inconsistent billing logic.</p>
+            <p class="project-card__solution"><strong>Solution:</strong> Developed a CLI-based vehicle rental management tool in Python using Object-Oriented Programming and dictionaries to store and retrieve vehicle data.</p>
             <ul class="project-card__tech">
-              <li>Python</li><li>JSON</li><li>OOP</li><li>File Handling</li>
+              <li>Python</li><li>OOP</li><li>Dictionaries</li><li>CLI</li><li>Input Validation</li>
             </ul>
-            <p class="project-card__impact"><strong>Impact:</strong> Efficient book record management with Create, Read, Update, and Delete functionality.</p>
+            <p class="project-card__impact"><strong>Key Outcome:</strong> Implemented rental-price calculation and input validation while identifying and fixing conditional-flow bugs that incorrectly flagged unavailable vehicles.</p>
             <div class="project-card__links">
-              <a href="https://github.com/mahantesh-nigudgi" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://github.com/Mahantesh-Nigudgi/Vehicle_Rental_System" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
             </div>
           </article>
+
+          <article class="project-card" data-category="iot">
+            <div class="project-card__badge project-card__badge--iot">IoT</div>
+            <h3 class="project-card__title">IoT-Based Health Monitoring System</h3>
+            <p class="project-card__date">May 2024</p>
+            <p class="project-card__problem"><strong>Problem:</strong> Remote patient health tracking requires continuous monitoring and timely visibility into vital health data.</p>
+            <p class="project-card__solution"><strong>Solution:</strong> Built a health monitoring system integrating sensors and devices with an IoT cloud platform to remotely monitor and manage patient health in real time.</p>
+            <ul class="project-card__tech">
+              <li>C++</li><li>Arduino IDE</li><li>MATLAB</li><li>IoT Cloud</li>
+            </ul>
+            <p class="project-card__impact"><strong>Key Outcome:</strong> Designed a healthcare solution for continuous vital-data monitoring and early identification of potential health issues.</p>
+          </article>
+
+          <article class="project-card" data-category="iot">
+            <div class="project-card__badge project-card__badge--iot">IoT</div>
+            <h3 class="project-card__title">IoT-Based Automated Plant Watering System</h3>
+            <p class="project-card__date">May 2023</p>
+            <p class="project-card__problem"><strong>Problem:</strong> Manual watering can be inconsistent and may result in unnecessary water usage.</p>
+            <p class="project-card__solution"><strong>Solution:</strong> Developed an automated watering system using temperature and moisture sensors, with Arduino UNO controlling a servo motor for water pumping.</p>
+            <ul class="project-card__tech">
+              <li>C++</li><li>Arduino UNO</li><li>MATLAB</li><li>Temperature Sensor</li><li>Moisture Sensor</li><li>Servo Motor</li>
+            </ul>
+            <p class="project-card__impact"><strong>Key Outcome:</strong> Automated irrigation based on environmental conditions for more precise watering control.</p>
+          </article>
+
         </div>
       </div>
     </section>
@@ -397,7 +399,7 @@ Every challenge is a chance to grow.</span>
                 <small>github.com/mahantesh-nigudgi</small>
               </span>
             </a>
-            <a class="contact-link" href="resume.pdf" download="Mahantesh_S_Nigudgi_Resume.pdf">
+            <a class="contact-link" href="Mahantesh_S_Nigudgi.pdf" download="Mahantesh_S_Nigudgi_Resume.pdf">
               <span class="contact-link__icon" aria-hidden="true">↓</span>
               <span>
                 <strong>Resume (PDF)</strong>
